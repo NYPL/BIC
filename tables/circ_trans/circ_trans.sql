@@ -23,4 +23,4 @@ CREATE TABLE circ_trans(
 	patron_home_library_code VARCHAR(20),
 	patron_agency_code_num SMALLINT,
 	loanrule_code_num SMALLINT
-	);
+);
