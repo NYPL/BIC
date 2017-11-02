@@ -1,8 +1,11 @@
 CREATE TABLE circ_trans(
 	id INTEGER not null distkey,
-	item_id INTEGER,
 	patron_id INTEGER,
-	bib_id INTEGER ,
+	item_id INTEGER,
+	item_record_id BIGINT,
+	bib_id INTEGER,
+	bib_record_id BIGINT,
+	volume_record_id BIGINT,
 	transaction_gmt TIMESTAMPTZ not null sortkey,
 	application_name VARCHAR(200),
 	source_code  VARCHAR(200),
