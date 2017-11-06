@@ -1,6 +1,7 @@
 CREATE TABLE circ_trans(
 	id INTEGER not null distkey,
 	patron_id INTEGER,
+	patron_record_id BIGINT,
 	item_id INTEGER,
 	item_record_id BIGINT,
 	bib_id INTEGER,
