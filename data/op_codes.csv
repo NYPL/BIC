@@ -1,0 +1,15 @@
+op_code,op_code_label
+o,checkout
+i,checkin
+n,hold
+nb,bib hold
+ni,item hold
+nv,volume hold
+h,hold with recall
+hb,hold recall bib
+hi,hold recall item
+hv,hold recall volume
+f,filled hold
+r,renewal
+b,booking
+u,use count

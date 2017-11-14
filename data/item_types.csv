@@ -1,0 +1,257 @@
+itype code,Sierra label,Branch or Research,Division,PNP
+-1,Hold,Hold,Hold,
+0,default,Default,Research,Print
+1,non-circ,Research Use Only,Research,Print
+2,book non-circ,Research Use Only,Research,Print
+3,serial,Research Use Only,Research,Print
+4,"serial, loose",Research Use Only,Research,Print
+5,"serial, loose, 1 hour",Research Use Only,Research,Print
+6,microfilm service copy,Research Use Only,Research,Non-Print
+7,"printed music, non-circ",Research Use Only,Research,Print
+8,manuscript music,Research Use Only,Research,Print
+9,map,Research Use Only,Research,Print
+10,"map, manuscript",Research Use Only,Research,Print
+11,"videorecording, non-circ",Research Use Only,Research,Non-Print
+12,musical sound recording,Research Use Only,Research,Non-Print
+13,spoken sound recording,Research Use Only,Research,Non-Print
+14,moving image,Research Use Only,Research,Non-Print
+15,flat graphic,Research Use Only,Research,Print
+16,computer file,Research Use Only,Research,Non-Print
+17,kit,Research Use Only,Research,Non-Print
+18,mixed medium collection,Research Use Only,Research,Non-Print
+19,3-D object,Research Use Only,Research,Non-Print
+20,manuscript,Research Use Only,Research,Print
+21,archival material,Research Use Only,Research,Print
+22,clipping files,Research Use Only,Research,Print
+23,archival sound recording,Research Use Only,Research,Non-Print
+24,archival video recording,Research Use Only,Research,Non-Print
+25,atlas,Research Use Only,Research,Print
+26,microfiche,Research Use Only,Research,Non-Print
+27,preservation master negative,Research Use Only,Research,Non-Print
+28,printing master negative,Research Use Only,Research,Non-Print
+29,bundled materials (vols.),Research Use Only,Research,Print
+30,loose newspaper,Research Use Only,Research,Print
+31,"google project, non-circ",Research Use Only,Research,Print
+32,"google project, book",Research Use Only,Research,Print
+33,"google project, serial",Research Use Only,Research,Print
+34,micro-opaque,Research Use Only,Research,Non-Print
+35,"cd-rom, dvd-rom",Research Use Only,Research,Non-Print
+36,www based,Research Use Only,Research,Non-Print
+37,master recording,Research Use Only,Research,Non-Print
+38,art and artifacts,Research Use Only,Research,Non-Print
+39,,,,
+40,,,,
+41,"internet archive, non-circ",Research Use Only,Research,Non-Print
+42,"internet archive, book",Research Use Only,Research,Non-Print
+43,"internet archive, serial",Research Use Only,Research,Non-Print
+44,,,,
+45,,,,
+46,,,,
+47,,,,
+48,,,,
+49,,,,
+50,offsite requesting - ncip,Research Use Only,Research,Print
+51,i-archive/google non-circ,Research Use Only,Research,Print
+52,i-archive/google monograph,Research Use Only,Research,Print
+53,i-archive/google serial,Research Use Only,Research,Print
+54,,,,
+55,"book, limited circ, MaRLI",Research Use Only,Research,Print
+56,,,,
+57,printed music limited circ MaRLI,Research Use Only,Research,Print
+58,,,,
+59,,,,
+60,"pamphlets, singles, 1-50 pages",Research Use Only,Research,Print
+61,"pamphlet volumes, bound with",Research Use Only,Research,Print
+62,,,,
+63,,,,
+64,,,,
+65,"book, good condition, non-MaRLI",Research Use Only,Research,Print
+66,"book, poor condition, non-MaRLI",Research Use Only,Research,Print
+67,"printed music, good, non-MaRLI",Research Use Only,Research,Print
+68,"printed music, poor, non-MaRLI",Research Use Only,Research,Print
+69,,,,
+70,,,,
+71,,,,
+72,,,,
+73,,,,
+74,,,,
+75,,,,
+76,,,,
+77,,,,
+78,,,,
+79,Interlibrary Loan - Research,Research Use Only,Research,Print
+80,,,,
+81,,,,
+82,,,,
+83,,,,
+84,,,,
+85,,,,
+86,,,,
+87,,,,
+88,,,,
+89,,,,
+90,,,,
+91,,,,
+92,,,,
+93,,,,
+94,,,,
+95,,,,
+96,,,,
+97,,,,
+98,,,,
+99,,,,
+100,On order (migration) (Discontinued),Do Not Use,On Order,Print
+101,"Book, circ",Branch Use Only; Adult,Branch,Print
+102,"Book, paperback",Branch Use Only; Adult,Branch,Print
+103,"Book, express",Branch Use Only; Adult,Branch,Print
+104,"Reference non-circ Book,PER,etc.",Branch Use Only; Adult,Branch,Print
+105,Pamphlet,Branch Use Only; Adult,Branch,Print
+106,Center for reading/writing,Branch Use Only; Adult,Branch,Print
+107,"Periodical, circ, serial",Branch Use Only; Adult,Branch,Print
+108,Lpa score,Branch Use Only; Adult,Branch,Print
+109,Lpa song index score,Branch Use Only; Adult,Branch,Print
+110,VHS,Branch Use Only; Adult,Branch,Non-Print
+111,DVD,Branch Use Only; Adult,Branch,Non-Print
+112,DVD express,Branch Use Only; Adult,Branch,Non-Print
+113,VCD,Branch Use Only; Adult,Branch,Non-Print
+114,Compact disc,Branch Use Only; Adult,Branch,Non-Print
+115,Cd express,Branch Use Only; Adult,Branch,Non-Print
+116,Audiocassette,Branch Use Only; Adult,Branch,Non-Print
+117,"Book, circ, 2-Week, New",Branch Use Only; Adult,Branch,Print
+118,Recorded book,Branch Use Only; Adult,Branch,Non-Print
+119,Software,Branch Use Only; Adult,Branch,Non-Print
+120,Picture,Branch Use Only; Adult,Branch,Print
+121,Mixed media set,Branch Use Only; Adult,Branch,Non-Print
+122,Cd-rom,Branch Use Only; Adult,Branch,Non-Print
+123,Game express,Branch Use Only; Adult,Branch,Non-Print
+124,E-nypl book,Branch Use Only; Adult,Branch,Print
+125,E-nypl audio book,Branch Use Only; Adult,Branch,Non-Print
+126,E-nypl music,Branch Use Only; Adult,Branch,Non-Print
+127,E-nypl video,Branch Use Only; Adult,Branch,Non-Print
+128,Wireless laptop,Branch Use Only; Adult,Branch,Non-Print
+129,Borrowed ILL,Branch Use Only; Adult,Branch,Print
+130,Equipment,Branch Use Only; Adult,Branch,Non-Print
+131,Adult fast add item,Branch Use Only; Adult,Branch,Print
+132,RFVC - FILM,Branch Use Only; Adult,Branch,Non-Print
+133,RFVC - FILM PRESERVATION,Branch Use Only; Adult,Branch,Non-Print
+134,RFVC - VHS,Branch Use Only; Adult,Branch,Non-Print
+135,RFVC - DVD,Branch Use Only; Adult,Branch,Non-Print
+136,"Leased book 2-Week, New",Branch Use Only; Adult,Branch,Print
+137,"Leased book, express",Branch Use Only; Adult,Branch,Print
+138,"Leased book, 3-week",Branch Use Only; Adult,Branch,Print
+139,Chrome book,Branch Use Only,Branch,Non-Print
+140,Blu-ray,Branch Use Only; Adult,Branch,Non-Print
+141,Blu-ray express,Branch Use Only; Adult,Branch,Non-Print
+142,RFVC - LPA Blu-ray,Branch Use Only; Adult,Branch,Non-Print
+143,"ELL book, iZone at AG,IN,MH,SE",Branch Use Only; Adult,Branch,Print
+144,Lpa orchestra collection,Branch Use Only; Adult,Branch,Non-Print
+145,,,,
+146,,,,
+147,,,,
+148,,,,
+149,,,,
+150,Clear WiFi Access Point,Branch Use Only,Branch,Non-Print
+151,Calculator,Branch Use Only,Branch,Non-Print
+152,Video Visit Room,Branch Use Only,Branch,Non-Print
+153,,,,
+154,,,,
+155,,,,
+156,,,,
+157,,,,
+158,,,,
+159,,,,
+160,,,,
+161,,,,
+162,,,,
+163,,,,
+164,,,,
+165,,,,
+166,,,,
+167,,,,
+168,,,,
+169,,,,
+170,,,,
+171,,,,
+172,,,,
+173,,,,
+174,,,,
+175,,,,
+176,,,,
+177,,,,
+178,,,,
+179,,,,
+180,,,,
+181,,,,
+182,,,,
+183,,,,
+184,,,,
+185,,,,
+186,,,,
+187,,,,
+188,,,,
+189,,,,
+190,,,,
+191,,,,
+192,,,,
+193,,,,
+194,,,,
+195,,,,
+196,,,,
+197,,,,
+198,,,,
+199,,,,
+200,,,,
+201,J book,Branch Use Only; Juvenile,Branch,Print
+202,J recorded book,Branch Use Only; Juvenile,Branch,Non-Print
+203,J compact disc,Branch Use Only; Juvenile,Branch,Non-Print
+204,J cd-rom,Branch Use Only; Juvenile,Branch,Non-Print
+205,J audiocassette,Branch Use Only; Juvenile,Branch,Non-Print
+206,J DVD,Branch Use Only; Juvenile,Branch,Non-Print
+207,J fast add item,Branch Use Only; Juvenile,Branch,Print
+208,J game express,Branch Use Only; Juvenile,Branch,Non-Print
+209,J mixed media set,Branch Use Only; Juvenile,Branch,Non-Print
+210,J long playing record,Branch Use Only; Juvenile,Branch,Non-Print
+211,J paperback,Branch Use Only; Juvenile,Branch,Print
+212,J periodical,Branch Use Only; Juvenile,Branch,Print
+213,J reference,Branch Use Only; Juvenile,Branch,Print
+214,J software,Branch Use Only; Juvenile,Branch,Non-Print
+215,J videocassette,Branch Use Only; Juvenile,Branch,Non-Print
+216,J DVD express,Branch Use Only; Juvenile,Branch,Non-Print
+217,J Blu-ray,Branch Use Only; Juvenile,Branch,Non-Print
+218,J Blu-ray express,Branch Use Only; Juvenile,Branch,Non-Print
+219,J ELL book at AG IN MH SE,Branch Use Only; Juvenile,Branch,Print
+220,J pre-k book,Branch Use Only; Juvenile,Branch,Print
+221,J Tablet - LaunchPads,Branch Use Only; Juvenile,Branch,Non-Print
+222,Read Together: Storytime Kits,Branch Use Only; Juvenile,Branch,Print
+223,,,,
+224,,,,
+225,,,,
+226,,,,
+227,,,,
+228,,,,
+229,,,,
+230,YA DVD express,Branch Use Only; YA,Branch,Non-Print
+231,YA book,Branch Use Only; YA,Branch,Print
+232,YA recorded book,Branch Use Only; YA,Branch,Non-Print
+233,YA CD,Branch Use Only; YA,Branch,Non-Print
+234,YA CD express,Branch Use Only; YA,Branch,Non-Print
+235,YA DVD,Branch Use Only; YA,Branch,Non-Print
+236,YA game express,Branch Use Only; YA,Branch,Non-Print
+237,YA pamphlet,Branch Use Only; YA,Branch,Print
+238,YA paperback,Branch Use Only; YA,Branch,Print
+239,YA periodical,Branch Use Only; YA,Branch,Print
+240,YA Blu-ray,Branch Use Only; YA,Branch,Non-Print
+241,YA Blu-ray express,Branch Use Only; YA,Branch,Non-Print
+242,YA ELL book at AG IN MH SE,Branch Use Only; YA,Branch,Print
+243,,,,
+244,,,,
+245,,,,
+246,,,,
+247,,,,
+248,,,,
+249,,,,
+250,,,,
+251,,,,
+252,Teacher Set (DOE EDUCATOR ONLY),Branch Use Only,Branch,Print
+253,Teacher Set Playaway,Branch Use Only,Branch,Non-Print
+254,,,,
