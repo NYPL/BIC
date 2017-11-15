@@ -17,3 +17,30 @@ Name                  | Data Schema                                             
 ## Data
 
 The [data](data) directory contains CSVs with data for various lookup tables.
+
+## Users
+
+### Add a new read-only user
+
+To add a new read-only user to Redshift:
+
+```
+CREATE USER username WITH password 'password123';
+ALTER GROUP readonly ADD USER user;
+```
+
+User credentials should be stored in Parameter Store as `production/redshift/credentials/{username}`. An example value:
+
+```
+{"username":"analysis","password":"1234567"}
+```
+
+### Creating the `readonly` group
+
+The `readonly` group in Redshift was created as follows:
+
+```
+CREATE GROUP readonly;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO GROUP readonly;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO GROUP readonly;
+```
