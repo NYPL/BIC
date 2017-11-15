@@ -26,10 +26,10 @@ To add a new read-only user to Redshift:
 
 ```
 CREATE USER username WITH password 'password123';
-ALTER GROUP readonly ADD USER user;
+ALTER GROUP readonly ADD USER username;
 ```
 
-User credentials should be stored in Parameter Store as `production/redshift/credentials/{username}`. An example value:
+User credentials should be stored as a `Secure String` in Parameter Store as `production/redshift/credentials/{username}`. An example value:
 
 ```
 {"username":"analysis","password":"1234567"}
