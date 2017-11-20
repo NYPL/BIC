@@ -17,3 +17,7 @@ Name                  | Data Schema                                             
 ## Data
 
 The [data](data) directory contains CSVs with data for various lookup tables.
+
+## Services Involved
+1) circTransPoller - `https://github.com/NYPL/dataHarvester`
+2) circTransTransformerService - `https://github.com/NYPL/dw-circ-trans-transformer`
