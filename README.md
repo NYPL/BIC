@@ -18,6 +18,33 @@ Name                  | Data Schema                                             
 
 The [data](data) directory contains CSVs with data for various lookup tables.
 
+## Users
+
+### Add a new read-only user
+
+To add a new read-only user to Redshift:
+
+```
+CREATE USER username WITH password 'password123';
+ALTER GROUP readonly ADD USER username;
+```
+
+User credentials should be stored as a `Secure String` in Parameter Store as `production/redshift/credentials/{username}`. An example value:
+
+```
+{"username":"analysis","password":"1234567"}
+```
+
+### Creating the `readonly` group
+
+The `readonly` group in Redshift was created as follows:
+
+```
+CREATE GROUP readonly;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO GROUP readonly;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO GROUP readonly;
+```
+
 ## Services Involved
-1) circTransPoller - `https://github.com/NYPL/dataHarvester`
-2) circTransTransformerService - `https://github.com/NYPL/dw-circ-trans-transformer`
+1) circTransPoller - [https://github.com/NYPL/dataHarvester](https://github.com/NYPL/dataHarvester)
+2) circTransTransformerService - [https://github.com/NYPL/dw-circ-trans-transformer](https://github.com/NYPL/dw-circ-trans-transformer)
