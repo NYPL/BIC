@@ -1,334 +1,334 @@
-code,location
-1,Allerton
-2,Baychester
-3,Belmont
-4,City Island
-5,Clason's Point
-6,Castle Hill
-7,Spuyten Duyvil
-8,Eastchester
-9,Edenwald
-10,Bronx Library Center
-11,Francis Martin
-12,Grand Concourse
-13,High Bridge
-14,Hunt's Point
-15,Jerome Park
-16,Kingsbridge
-17,Melrose
-18,Mott Haven
-19,Mosholu
-20,Morrisania
-21,Parkchester
-22,Pelham Bay
-23,Riverdale
-24,Sedgwick
-25,Soundview
-26,Throg's Neck
-27,Tremont
-28,Van Cortlandt
-29,Van Nest
-30,West Farms
-31,Wakefield
-32,Woodlawn Heights
-33,Woodstock
-34,Westchester Square
-35,Aguilar
-36,Bloomingdale
-37,George Bruce
-38,Cathedral
-39,Chatham Square
-40,Morningside Heights
-41,Columbus
-42,Epiphany
-43,58th Street
-44,Fort Washington
-46,Hamilton Fish
-45,125th Street
-47,Hamilton Grange
-48,Harlem
-49,Hudson Park
-50,Countee Cullen
-51,115th Street
-52,Inwood
-53,Jefferson Market
-54,Kips Bay
-55,New Amsterdam
-56,Macomb's Bridge
-57,Mulberry Street
-58,Mulhenburg
-59,96th Street
-60,Ottendorfer
-61,Roosevelt Island
-62,Riverside
-63,St Agnes
-64,Seward Park
-65,67th Street
-66,Tompkins Square
-67,Webster
-68,Washington Heights
-69,Yorkville
-70,Dongan Hills
-71,Great Kills
-72,Huguenot Park
-73,West New Brighton
-74,New Dorp
-75,Port Richmond
-76,Richmondtown
-77,South Beach
-78,Stapleton
-79,St George
-80,Todt-Hill
-81,Tottenville
-82,Andrew Heiskell
-83,Mid Manhattan
-84,Performing Arts (MY)
-85,MA - BPSE Stacks
-86,SIBL
-87,Morris Park
-88,Grand Central
-89,SC Paging Desk
-90,TeleRenewal (TNS)
-91,MA PageStaff-Scholar
-92,Children's Room(SAS)
-93,Battery Park
-94,Mariner's Harbor
-96,MyLibNYC - STRAT
-95,DOE Educator Circ
-195,BookOps General ACQ
-196,BookOps General CAT
-197,BookOps General CIRC
-198,BookOps ACQ - Serial
-199,BookOps ACQ Recv
-201,AL Self Checkout
-202,BA Self Checkout
-203,BE Self Checkout
-204,CI Self Checkout
-205,CP Self Checkout
-206,CT Self Checkout
-207,DY Self Checkout
-208,EA Self Checkout
-209,EW Self Checkout
-210,BC Self Checkout
-211,FX Self Checkout
-212,GD Self Checkout
-213,HB Self Checkout
-214,HS Self Checkout
-215,JP Self Checkout
-216,KB Self Checkout
-217,ME Self Checkout
-218,MH Self Checkout
-219,MO Self Checkout
-220,MR Self Checkout
-221,PK Self Checkout
-222,PM Self Checkout
-223,RD Self Checkout
-224,SD Self Checkout
-225,SV Self Checkout
-226,TG Self Checkout
-227,TM Self Checkout
-228,VC Self Checkout
-229,VN Self Checkout
-230,WF Self Checkout
-231,WK Self Checkout
-232,WL Self Checkout
-233,WO Self Checkout
-234,WT Self Checkout
-235,AG Self Checkout
-236,BL Self Checkout
-237,BR Self Checkout
-238,CA Self Checkout
-239,CH Self Checkout
-240,CL Self Checkout
-241,CS Self Checkout
-242,EP Self Checkout
-243,FE Self Checkout
-244,FW Self Checkout
-245,HD Self Checkout
-246,HF Self Checkout
-247,HG Self Checkout
-248,HL Self Checkout
-249,HP Self Checkout
-250,HT Self Checkout
-251,HU Self Checkout
-252,IN Self Checkout
-253,JM Self Checkout
-254,KP Self Checkout
-255,LM Self Checkout
-256,MB Self Checkout
-257,ML Self Checkout
-258,MU Self Checkout
-259,NS Self Checkout
-260,OT Self Checkout
-261,RI Self Checkout
-262,RS Self Checkout
-263,SA Self Checkout
-264,SE Self Checkout
-265,SS Self Checkout
-266,TS Self Checkout
-267,WB Self Checkout
-268,WH Self Checkout
-269,YV Self Checkout
-270,DH Self Checkout
-271,GK Self Checkout
-272,HK Self Checkout
-273,NB Self Checkout
-274,ND Self Checkout
-275,PR Self Checkout
-276,RT Self Checkout
-277,SB Self Checkout
-278,ST Self Checkout
-279,SG Self Checkout
-280,TH Self Checkout
-281,TV Self Checkout
-282,LB Self Checkout
-283,MM Self Checkout
-284,MY Self Checkout
-285,MA RR Self Checkout
-286,SL Self Checkout
-287,MP Self Checkout
-288,GC Self Checkout
-289,SC Self Checkout
-292,MAJ Self Checkout
-293,BT Self Checkout
-294,MN Self Checkout
-300,MA acq admin
-301,MA acq monograph
-302,MA acq serialsorder
-303,MA acq serials proc
-304,MA ACQ ElectronicRes
-305,CCO Acquisitions
-306,MAO Maureen Mulhern
-307,SL Acquisitions
-308,CCO Acq Training
-309,SIBL - Altman Desk
-310,Binding and Process
-311,CD-Cataloging Office
-312,Cataloging-Fast Trac
-313,Cataloging Maint
-314,Cataloging-Monograph
-315,Cataloging - Serials
-316,MY Dance Cataloging
-317,LPA - Print Delivery
-318,LPA Special Col Desk
-319,LPA - MYR Cataloging
-320,MA Photo Services
-321,MA Preserv/Reformat
-322,MA - Maps Cataloging
-323,SC Stacks / Cat
-324,Cat - Special Format
-325,Catalog-Manuscripts
-326,GRP-Period Process
-327,GRP-Circ Periodical
-328,MA Photo Services
-329,MA Circ Art-Arch
-330,MA Circ Berg Coll
-331,MA CircGenResDiv
-332,MA CircJewish Coll
-333,MA Circ LocHisGen
-334,MA Circ ManuscptArc
-335,MA Circ Maps Coll
-336,MA Circ Pforz Coll
-337,MA Circ Photo Coll
-338,MA Circ RareBk Coll
-339,MA Circ WallachPrnt
-340,MA - Google
-341,ACCSVC SASB Room 50
-342,MA Binding Prep
-344,Circ ILL
-345,MA Preserv/Conserv
-346,MA Circ PreservColl
-347,MY Circ Music
-348,PAA Circulation
-349,SL - Express
-350,SC Circ ArtCraftDiv
-351,SC CircFilmSoundDiv
-352,SC CircManArchRare
-353,SC Circ PrintsPhoto
-359,39th St Admin Office
-360,SIO
-361,OAS - Adult Services
-362,ASK - Circulation
-363,MY Serials
-364,CCO ACQ Receiving
-365,MA Cir Art Generic
-366,Cullman Scholars
-367,"Misner, Michelle"
-368,Learning & Dev
-369,Digital Imaging Unit
-370,OST TRAINING
-371,Fusion Project
-372,MyLibNYC - Logistics
-373,NYPLLABS
-374,Chris Mulholland
-375,ftsmail login
-391,53rd Street Branch
-400,Permissions
-500,SL ReCAP Proj
-600,LSC SORTER
-700,CIRCA
-701,3M Cloud Library
-702,MM Bib Selfcheckout
-703,MY Bib Selfcheckout
-704,Stack Group
-778,PCC - Preservation
-799,E-Com Bibliocommons
-800,E-Com Web Pac
-801,Staff Branch Web
-802,Staff Research Web
-803,WiFi Bronx
-804,WiFi Core
-805,WiFi Manhattan
-806,WiFI Staten Island
-807,AWS Admin
-808,KidsOnline (kidspac)
-809,Library Patrons
-810,Webpac-hold requests
-811,Strategy Office
-812,CCO Admin - D Medina
-813,ITCLOUD
-814,NCIP
-815,Orchestra Collection
-819,Kanopy Streaming
-820,MM at 42 Stacks
-888,CCO BARCODE PROJECT
-900,DOE Batch Checkout
-901,Millennium ITAPPS
-902,CCO Acquisitions
-903,CCO Administration
-904,CCO Cataloging
-905,
-906,Mil ElectResMan
-907,Mil Scheduler
-908,Mil Serials
-909,Millennium Training
-910,AAD-ElectronicResMan
-911,Notices-Data Center
-912,ITG-MM Troubleshoot
-913,CCD
-914,Digital Experience
-915,Libtech
-916,CCO Spine Labels
-917,CCO Spine Label Test
-918,Strategy Office
-919,Serials Training BL
-920,SL Acct Circ
-921,CCO Logistics
-922,CCO FKI Sorter
-923,CCO Edu Collection
-925,CPRC Receiving
-926,CCO - ARCHV
-997,Offsite Processing
-999,unidentified selfck
-777,SMS Text
-185,MA - BPSE2
-392,SASB - Allen Rm
-393,SASB - Wertheim Rm
-394,SASB - Shoichi Noma
-401,MM Selfcheck
-402,OUT- CHILD PROGRAM
-816,MM at 42nd St
-817,MM at 42nd St
-818,MM at 42nd St
-395,Picture Collection
-396,MaRLI - SASB
+code,location,id
+1,Allerton,AL
+2,Baychester,BAR
+3,Belmont,BER
+4,City Island,CI
+5,Clason's Point,CP
+6,Castle Hill,CT
+7,Spuyten Duyvil,DY
+8,Eastchester,EA
+9,Edenwald,EW
+10,Bronx Library Center,BLC
+11,Francis Martin,FXR
+12,Grand Concourse,GD
+13,High Bridge,HB
+14,Hunt's Point,HSR
+15,Jerome Park,JP
+16,Kingsbridge,KBR
+17,Melrose,ME
+18,Mott Haven,MH
+19,Mosholu,MO
+20,Morrisania,MR
+21,Parkchester,PKR
+22,Pelham Bay,PM
+23,Riverdale,RD
+24,Sedgwick,SD
+25,Soundview,SV
+26,Throg's Neck,TG
+27,Tremont,TM
+28,Van Cortlandt,VC
+29,Van Nest,VN
+30,West Farms,WF
+31,Wakefield,WK
+32,Woodlawn Heights,WL
+33,Woodstock,WO
+34,Westchester Square,WT
+35,Aguilar,AG
+36,Bloomingdale,BLR
+37,George Bruce,BR
+38,Cathedral,CA
+39,Chatham Square,CHR
+40,Morningside Heights,CL
+41,Columbus,CS
+42,Epiphany,EP
+43,58th Street,FE
+44,Fort Washington,FW
+46,Hamilton Fish,HF
+45,125th Street,HD
+47,Hamilton Grange,HG
+48,Harlem,HL
+49,Hudson Park,HP
+50,Countee Cullen,HTR
+51,115th Street,HU
+52,Inwood,INR
+53,Jefferson Market,JMR
+54,Kips Bay,KP
+55,New Amsterdam,LM
+56,Macomb's Bridge,MB
+57,Mulberry Street,ML
+58,Mulhenburg,MU
+59,96th Street,NSR
+60,Ottendorfer,OT
+61,Roosevelt Island,RI
+62,Riverside,R
+63,St Agnes,SA
+64,Seward Park,SE
+65,67th Street,SS
+66,Tompkins Square,TS
+67,Webster,WB
+68,Washington Heights,WH
+69,Yorkville,YV
+70,Dongan Hills,DH
+71,Great Kills,GK
+72,Huguenot Park,HK
+73,West New Brighton,NB
+74,New Dorp,NDR
+75,Port Richmond,PR
+76,Richmondtown,RT
+77,South Beach,SB
+78,Stapleton,ST
+79,St George,SGC
+80,Todt-Hill,THR
+81,Tottenville,TV
+82,Andrew Heiskell,LBL
+83,Mid Manhattan,MML
+84,Performing Arts (MY),LPA
+85,MA - BPSE Stacks,SASB
+86,SIBL,SIBL
+87,Morris Park,MP
+88,Grand Central,GC
+89,SC Paging Desk,
+90,TeleRenewal (TNS),
+91,MA PageStaff-Scholar,
+92,Children's Room(SAS),SASB
+93,Battery Park,BT
+94,Mariner's Harbor,MN
+96,MyLibNYC - STRAT,
+95,DOE Educator Circ,
+195,BookOps General ACQ,
+196,BookOps General CAT,
+197,BookOps General CIRC,
+198,BookOps ACQ - Serial,
+199,BookOps ACQ Recv,
+201,AL Self Checkout,AL
+202,BA Self Checkout,BAR
+203,BE Self Checkout,BER
+204,CI Self Checkout,CI
+205,CP Self Checkout,CP
+206,CT Self Checkout,CT
+207,DY Self Checkout,DY
+208,EA Self Checkout,EA
+209,EW Self Checkout,EW
+210,BC Self Checkout,BLC
+211,FX Self Checkout,FXR
+212,GD Self Checkout,GD
+213,HB Self Checkout,HB
+214,HS Self Checkout,HSR
+215,JP Self Checkout,JP
+216,KB Self Checkout,KBR
+217,ME Self Checkout,ME
+218,MH Self Checkout,MH
+219,MO Self Checkout,MO
+220,MR Self Checkout,MR
+221,PK Self Checkout,PKR
+222,PM Self Checkout,PM
+223,RD Self Checkout,RD
+224,SD Self Checkout,SD
+225,SV Self Checkout,SV
+226,TG Self Checkout,TG
+227,TM Self Checkout,TM
+228,VC Self Checkout,VC
+229,VN Self Checkout,VN
+230,WF Self Checkout,WF
+231,WK Self Checkout,WK
+232,WL Self Checkout,WL
+233,WO Self Checkout,WO
+234,WT Self Checkout,WT
+235,AG Self Checkout,AG
+236,BL Self Checkout,BLR
+237,BR Self Checkout,BR
+238,CA Self Checkout,CA
+239,CH Self Checkout,CHR
+240,CL Self Checkout,CL
+241,CS Self Checkout,CS
+242,EP Self Checkout,EP
+243,FE Self Checkout,FE
+244,FW Self Checkout,FW
+245,HD Self Checkout,HD
+246,HF Self Checkout,HF
+247,HG Self Checkout,HG
+248,HL Self Checkout,HL
+249,HP Self Checkout,HP
+250,HT Self Checkout,HTR
+251,HU Self Checkout,HU
+252,IN Self Checkout,INR
+253,JM Self Checkout,JMR
+254,KP Self Checkout,KP
+255,LM Self Checkout,LM
+256,MB Self Checkout,MB
+257,ML Self Checkout,ML
+258,MU Self Checkout,MU
+259,NS Self Checkout,NSR
+260,OT Self Checkout,OT
+261,RI Self Checkout,RI
+262,RS Self Checkout,
+263,SA Self Checkout,SA
+264,SE Self Checkout,SE
+265,SS Self Checkout,SS
+266,TS Self Checkout,TS
+267,WB Self Checkout,WB
+268,WH Self Checkout,WH
+269,YV Self Checkout,YV
+270,DH Self Checkout,DH
+271,GK Self Checkout,GK
+272,HK Self Checkout,HK
+273,NB Self Checkout,NB
+274,ND Self Checkout,NDR
+275,PR Self Checkout,PR
+276,RT Self Checkout,RT
+277,SB Self Checkout,SB
+278,ST Self Checkout,ST
+279,SG Self Checkout,SGC
+280,TH Self Checkout,THR
+281,TV Self Checkout,TV
+282,LB Self Checkout,LBL
+283,MM Self Checkout,MML
+284,MY Self Checkout,LPA
+285,MA RR Self Checkout,SASB
+286,SL Self Checkout,
+287,MP Self Checkout,MP
+288,GC Self Checkout,GC
+289,SC Self Checkout,SC
+292,MAJ Self Checkout,
+293,BT Self Checkout,BT
+294,MN Self Checkout,MN
+300,MA acq admin,SASB
+301,MA acq monograph,SASB
+302,MA acq serialsorder,SASB
+303,MA acq serials proc,SASB
+304,MA ACQ ElectronicRes,SASB
+305,CCO Acquisitions,
+306,MAO Maureen Mulhern,
+307,SL Acquisitions,
+308,CCO Acq Training,
+309,SIBL - Altman Desk,SIBL
+310,Binding and Process,
+311,CD-Cataloging Office,
+312,Cataloging-Fast Trac,
+313,Cataloging Maint,
+314,Cataloging-Monograph,
+315,Cataloging - Serials,
+316,MY Dance Cataloging,LPA
+317,LPA - Print Delivery,LPA
+318,LPA Special Col Desk,LPA
+319,LPA - MYR Cataloging,LPA
+320,MA Photo Services,SASB
+321,MA Preserv/Reformat,SASB
+322,MA - Maps Cataloging,SASB
+323,SC Stacks / Cat,SASB
+324,Cat - Special Format,SASB
+325,Catalog-Manuscripts,SASB
+326,GRP-Period Process,SASB
+327,GRP-Circ Periodical,SASB
+328,MA Photo Services,SASB
+329,MA Circ Art-Arch,SASB
+330,MA Circ Berg Coll,SASB
+331,MA CircGenResDiv,SASB
+332,MA CircJewish Coll,SASB
+333,MA Circ LocHisGen,SASB
+334,MA Circ ManuscptArc,SASB
+335,MA Circ Maps Coll,SASB
+336,MA Circ Pforz Coll,SASB
+337,MA Circ Photo Coll,SASB
+338,MA Circ RareBk Coll,SASB
+339,MA Circ WallachPrnt,SASB
+340,MA - Google,SASB
+341,ACCSVC SASB Room 50,SASB
+342,MA Binding Prep,SASB
+344,Circ ILL,
+345,MA Preserv/Conserv,SASB
+346,MA Circ PreservColl,SASB
+347,MY Circ Music,SASB
+348,PAA Circulation,
+349,SL - Express,
+350,SC Circ ArtCraftDiv,LPA
+351,SC CircFilmSoundDiv,LPA
+352,SC CircManArchRare,LPA
+353,SC Circ PrintsPhoto,LPA
+359,39th St Admin Office,
+360,SIO,
+361,OAS - Adult Services,
+362,ASK - Circulation,
+363,MY Serials,
+364,CCO ACQ Receiving,
+365,MA Cir Art Generic,SASB
+366,Cullman Scholars,
+367,"Misner, Michelle",
+368,Learning & Dev,
+369,Digital Imaging Unit,
+370,OST TRAINING,
+371,Fusion Project,
+372,MyLibNYC - Logistics,
+373,NYPLLABS,
+374,Chris Mulholland,
+375,ftsmail login,
+391,53rd Street Branch,
+400,Permissions,
+500,SL ReCAP Proj,
+600,LSC SORTER,
+700,CIRCA,
+701,3M Cloud Library,
+702,MM Bib Selfcheckout,
+703,MY Bib Selfcheckout,
+704,Stack Group,
+778,PCC - Preservation,
+799,E-Com Bibliocommons,
+800,E-Com Web Pac,
+801,Staff Branch Web,
+802,Staff Research Web,
+803,WiFi Bronx,
+804,WiFi Core,
+805,WiFi Manhattan,
+806,WiFI Staten Island,
+807,AWS Admin,
+808,KidsOnline (kidspac),
+809,Library Patrons,
+810,Webpac-hold requests,
+811,Strategy Office,
+812,CCO Admin - D Medina,
+813,ITCLOUD,
+814,NCIP,
+815,Orchestra Collection,
+819,Kanopy Streaming,
+820,MM at 42 Stacks,
+888,CCO BARCODE PROJECT,
+900,DOE Batch Checkout,
+901,Millennium ITAPPS,
+902,CCO Acquisitions,
+903,CCO Administration,
+904,CCO Cataloging,
+905,,
+906,Mil ElectResMan,
+907,Mil Scheduler,
+908,Mil Serials,
+909,Millennium Training,
+910,AAD-ElectronicResMan,
+911,Notices-Data Center,
+912,ITG-MM Troubleshoot,
+913,CCD,
+914,Digital Experience,
+915,Libtech,
+916,CCO Spine Labels,
+917,CCO Spine Label Test,
+918,Strategy Office,
+919,Serials Training BL,
+920,SL Acct Circ,
+921,CCO Logistics,
+922,CCO FKI Sorter,
+923,CCO Edu Collection,
+925,CPRC Receiving,
+926,CCO - ARCHV,
+997,Offsite Processing,
+999,unidentified selfck,
+777,SMS Text,
+185,MA - BPSE2,
+392,SASB - Allen Rm,SASB
+393,SASB - Wertheim Rm,SASB
+394,SASB - Shoichi Noma,SASB
+401,MM Selfcheck,
+402,OUT- CHILD PROGRAM,
+816,MM at 42nd St,MML
+817,MM at 42nd St,MML
+818,MM at 42nd St,MML
+395,Picture Collection,SASB
+396,MaRLI - SASB,
