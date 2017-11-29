@@ -50,7 +50,22 @@ GRANT SELECT ON ALL TABLES IN SCHEMA public TO GROUP readonly;
 ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO GROUP readonly;
 ```
 
+## QuickSight
+
+These queries are used to build data sets in QuickSight:
+
+- [circ_trans_combined_v2.sql](quicksight/queries/circ_trans_combined_v2.sql)
+
+## Anonymization
+
+### Databases
+
+Environment  | Endpoint
+------------ | ----------
+Development  | `shared-dev.rtovuw.0001.use1.cache.amazonaws.com`
+Production   | `shared-dev.rtovuw.0001.use1.cache.amazonaws.com`
+
 ## Services Involved
 
-1. circTransPoller - [https://github.com/NYPL/dataHarvester](https://github.com/NYPL/dataHarvester)
-2. circTransTransformerService - [https://github.com/NYPL/dw-circ-trans-transformer](https://github.com/NYPL/dw-circ-trans-transformer)
+- circTransPoller - [https://github.com/NYPL/dataHarvester](https://github.com/NYPL/dataHarvester)
+- circTransTransformerService - [https://github.com/NYPL/dw-circ-trans-transformer](https://github.com/NYPL/dw-circ-trans-transformer)
