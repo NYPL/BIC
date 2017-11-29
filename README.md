@@ -60,10 +60,12 @@ These queries are used to build data sets in QuickSight:
 
 ### Databases
 
+These databases contain the anonymization mappings:
+
 Environment  | Endpoint
 ------------ | ----------
 Development  | `shared-dev.rtovuw.0001.use1.cache.amazonaws.com`
-Production   | `shared-dev.rtovuw.0001.use1.cache.amazonaws.com`
+Production   | `anonymizer-prod.frh6pg.0001.use1.cache.amazonaws.com`
 
 ## Services Involved
 
