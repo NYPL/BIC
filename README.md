@@ -36,7 +36,7 @@ circ_trans_combined_v2 | [circ_trans_combined_v2.sql](quicksight/queries/circ_tr
 ### Presentations
 
 - [NYPL Data Warehouse Project](https://docs.google.com/presentation/d/1RP-sh7Dmkxgz-dzhu6wRHQzD8FUE3-HwIfbOf5MKNi0/edit): Presentation given at NYPL at the start of this project
-- [Getting Started with Amazon Redshift](aws_presentations/Getting_Started_with_Amazon_Redshift.pdf): Very useful presentation introductory presentation from Amazon about Redshift 
+- [Getting Started with Amazon Redshift](aws_presentations/Getting_Started_with_Amazon_Redshift.pdf): Useful introductory presentation from Amazon about Redshift
 - [Deep Dive on Amazon Redshift](aws_presentations/Amazon_Redshift_Deep_Dive.pdf): A deeper dive into the more technical aspects of Redshift
 
 ### More links
@@ -45,6 +45,10 @@ circ_trans_combined_v2 | [circ_trans_combined_v2.sql](quicksight/queries/circ_tr
 - [Sierra Circtrans Details](https://docs.google.com/spreadsheets/d/1heMNlpy4kGJx6EZpjROqJxHCl2F8LN2Ta2qoMq7FwcI/edit#gid=0)
 
 ## Technical Details
+
+### Architecture
+
+[Diagram](https://docs.google.com/presentation/d/1DZ5J_D6aiyOQ-Hchhs7o5zEojGby9anRPW0hV8WqVW0/edit)
 
 ### User Management
 
