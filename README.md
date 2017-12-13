@@ -49,3 +49,6 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO GROUP readon
 1) CircTransPoller - [https://github.com/NYPL/dataHarvester](https://github.com/NYPL/dataHarvester)
 2) CircTransAnonymizer - [https://github.com/NYPL/dw-circ-trans-anonymizer](https://github.com/NYPL/dw-circ-trans-anonymizer)
 3) AvroToJsonTransformer - [https://github.com/NYPL/firehose-avro-to-json-transformer](https://github.com/NYPL/firehose-avro-to-json-transformer)
+
+## AWS Services
+1) Kinesis Firehose ([setup](setup/firehose.md))
