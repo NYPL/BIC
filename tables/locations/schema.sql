@@ -1,10 +1,11 @@
 create table locations(
-    id varchar(10) not null sortkey,
-    short_code varchar(2),
-    long_code varchar(10),
-    name varchar(200),
-    sierra_label varchar(200),
-    location_type varchar(200),
-    is_public boolean
+    location_id varchar(10) not null sortkey,
+    location_short_code varchar(2),
+    location_long_code varchar(10),
+    location_name varchar(200),
+    location_sierra_label varchar(200),
+    location_location_type varchar(200),
+    location_is_public boolean,
+    location_detail_id varchar(4)
 )
 diststyle all

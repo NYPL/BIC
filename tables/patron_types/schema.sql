@@ -1,5 +1,5 @@
 create table patron_types(
-	id integer not null sortkey,
-	name varchar(100)
+	patron_type_id integer not null sortkey,
+	patron_type_name varchar(100)
 )
 diststyle all
