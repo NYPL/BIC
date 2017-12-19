@@ -4,5 +4,6 @@ create table patrons(
     patron_region varchar(200),
     patron_postal_code varchar(50),
     patron_lat float,
-    patron_lng float
+    patron_lng float,
+    patron_geocoded_address varchar(200)
 )

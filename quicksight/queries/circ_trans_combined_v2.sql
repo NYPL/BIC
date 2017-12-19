@@ -7,7 +7,7 @@ patron_home_regions.patron_home_region_sort_order, patron_home_regions.patron_ho
 patron_types.patron_type_name,
 terminal_codes.terminal_code_name,
 
-patrons.patron_city, patrons.patron_region, patrons.patron_postal_code, patrons.patron_lat, patrons.patron_lng,
+patrons.patron_city, patrons.patron_region, patrons.patron_postal_code, patrons.patron_lat, patrons.patron_lng, patrons.patron_geocoded_address,
 
 location_details.location_detail_short_name AS terminal_location_short_name,
 location_details.location_detail_lat AS terminal_code_location_lat,
