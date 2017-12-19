@@ -61,7 +61,9 @@ CREATE USER username WITH password 'password123';
 ALTER GROUP readonly ADD USER username;
 ```
 
-User credentials are be stored as a `Secure String` in Parameter Store as [`/production/redshift/credentials/{username}`](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Parameters:Path=%5BOneLevel%5D/production/redshift/credentials/;sort=Name). An example value:
+User credentials are stored as a `Secure String` in Parameter Store as [`/production/redshift/credentials/{username}`](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Parameters:Path=%5BOneLevel%5D/production/redshift/credentials/;sort=Name).
+
+An example value:
 
 ```
 {"username":"analysis","password":"1234567"}
