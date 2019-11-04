@@ -57,7 +57,9 @@ Informal benchmarking using Ruby bcrypt on AWS lambda suggests following relatio
 | `10` | 0.884s       |
 | `12` | ~3s          |
 
-With that in mind, `08` may be a good starting `cost` as it will allow a max of 4 transactions per second. Note that changing the `cost` part of the salt produces a different hash value, so we should choose an initial `cost` we expect to stick with.
+The average observed circ-trans traffic is about 42/minute (computed from 488k/week, which [has been a typical week over the past month](https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#metricsV2:graph=~(metrics~(~(~'AWS*2fKinesis~'PutRecords.Records~'StreamName~'CircTransData-production~(stat~'Sum~period~604800)))~view~'timeSeries~stacked~false~region~'us-east-1~start~'-P28D~end~'P0D);query=~'*7bAWS*2fKinesis*2cStreamName*7d*20circ)). The maximum rate at which circ-trans records have been written over the past 1 month was 330 in a single 1-minute period (on Nov 2, at 16:52 ET).
+
+With that in mind, `07` (earlier I recommended `08`) may be a good starting `cost` as it will allow a max of 8+ transactions per second (or 480/min - plenty faster than the fastest observed circ-trans traffic). Note that changing the `cost` part of the salt produces a different hash value, so we should choose an initial `cost` we expect to stick with.
 
 ### Collisions
 
