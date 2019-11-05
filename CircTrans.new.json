@@ -1,0 +1,43 @@
+{
+  "fields" : [
+    {
+       "doc" : "System-generated sequential ID.",
+       "name" : "id",
+       "type" : "int"
+    },
+    {
+       "doc" : "De-identified Patron ID for record",
+       "name" : "patron_id",
+       "type" : [
+          "null",
+          "int"
+       ]
+    },
+    {
+       "doc" : "Transaction date in UNIX format.",
+       "name" : "transaction_gmt",
+       "type" : [
+          "null",
+          "string"
+       ]
+    },
+    {
+       "doc" : "Type of transaction: o = checkout i = checkin n = hold nb = bib hold ni = item hold nv = volume hold h = hold with recall hb = hold recall bib hi = hold recall item hv = hold recall volume f = filled hold r = renewal b = booking u = use count",
+       "name" : "op_code",
+       "type" : [
+          "null",
+          "string"
+       ]
+    },
+    {
+       "doc" : "Item type code. (Defined by the library.)",
+       "name" : "itype_code_num",
+       "type" : [
+          "null",
+          "int"
+       ]
+    }
+  ],
+  "name" : "CircTrans",
+  "type" : "record"
+}
