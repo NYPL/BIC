@@ -6,7 +6,7 @@ The BIC is really version 3 of the Data Warehouse. See [History (Data Warehouse)
 
 ## Protections against re-identification
 
-The data has been modified to ensure that it's essentially impossible to derive any individual patron's detailed transaction history. Furthermore, the data granularity has been reduced to ensure that - should one have the means to identify an individual - the transaction history obtained would be of very low quality. In particular transactions do not record item information except `item_code_num`, `item_location_code`, and `icode1`. To make re-identification difficult, all timestamps are stored with day granularity, ensuring for example, that the *time* of checkout can not be used together with item type to re-identify an anonymized transaction. These choices m
+The data has been modified to ensure that it's essentially impossible to derive any individual patron's detailed transaction history. Furthermore, the data granularity has been reduced to ensure that - should one have the means to identify an individual - the transaction history obtained would be of very low quality. In particular transactions do not record item information except `item_code_num`, `item_location_code`, and `icode1`. To make re-identification difficult, all timestamps are stored with day granularity, ensuring for example, that the *time* of checkout can not be used together with item type to re-identify an anonymized transaction.
 
 Finally, we obfuscate patron ids using a closely guarded cryptographic [salt](https://en.wikipedia.org/wiki/Salt_(cryptography)).
 
