@@ -1,12 +1,14 @@
 # BIC
 
-The BIC gives NYPL Development staff access to anonymized circulation data for the purpose of assessing reach.
+The BIC gives NYPL access to anonymized circulation data for the purpose of assessing reach.
 
 The BIC is really version 3 of the Data Warehouse. See [History (Data Warehouse)](#history-data-warehouse) for information on its origins.
 
-## Anonymization
+## Protections against re-identification
 
-The data has been modified to ensure that it's essentially impossible to derive any individual patron's transaction history without knowing a closely guarded cryptographic [salt](https://en.wikipedia.org/wiki/Salt_(cryptography)). Furthermore, the data granularity has been reduced to ensure that - should one have the means to identify an individual - the transaction history obtained would be of very low quality. In particular transactions do not record item information except "item type", so it is not possible to determine *what specific* items were borrowed. To protect against re-identification, transaction timestamps are stored with day granularity, ensuring that the *time* of checkout can not be used together with item type to re-identify an anonymized transaction. In combination, these efforts approach a rough implementation of [k-anonymity](https://en.wikipedia.org/wiki/K-anonymity), although - given that there's no process in place to remove records that fall below *k* - it's possible our *k* is sometimes very low.
+The data has been modified to ensure that it's essentially impossible to derive any individual patron's detailed transaction history. Furthermore, the data granularity has been reduced to ensure that - should one have the means to identify an individual - the transaction history obtained would be of very low quality. In particular transactions do not record item information except `item_code_num`, `item_location_code`, and `icode1`. To make re-identification difficult, all timestamps are stored with day granularity, ensuring for example, that the *time* of checkout can not be used together with item type to re-identify an anonymized transaction. These choices m
+
+Finally, we obfuscate patron ids using a closely guarded cryptographic [salt](https://en.wikipedia.org/wiki/Salt_(cryptography)).
 
 ## Components
 
@@ -14,31 +16,7 @@ See [BIC (Data Warehouse v3)](https://docs.google.com/presentation/d/1e2dkC5vLwJ
 
 ### CircTransPoller
 
-The poller is a Ruby native lambda, which polls the Sierra database directly for transaction data. The following query is run:
-
-```sql
-SELECT patron.id AS patron_id,
-  circ_trans.ptype_code,
-  circ_trans.patron_home_library_code,
-  circ_trans.pcode3,
-  patron_address.postal_code,
-  circ_trans.itype_code_num,
-  circ_trans.item_location_code,
-  circ_trans.icode1,
-  circ_trans.op_code,
-  to_date(cast(circ_trans.transaction_gmt AS TEXT), 'YYYY-MM-DD'),
-  to_date(cast(circ_trans.due_date_gmt AS TEXT), 'YYYY-MM-DD'),
-  circ_trans.application_name,
-  circ_trans.stat_group_code_num,
-  circ_trans.loanrule_code_num,
-  circ_trans.source_code,
-  patron.checkout_count,
-  to_date(cast(patron.activity_gmt AS TEXT), 'YYYY-MM-DD') AS last_activity
-  FROM sierra_view.circ_trans
-  LEFT JOIN sierra_view.patron_record patron ON circ_trans.patron_record_id = patron.record_id
-  LEFT JOIN sierra_view.patron_record_address patron_address ON circ_trans.patron_record_id = patron_address.patron_record_id
-  LIMIT {LIMIT}
-```
+The poller is a Ruby native lambda, which polls the Sierra database directly for transaction data. It executes a [query against several joined tables](tables/circ_trans/query.sql).
 
 ### Firehose
 
@@ -60,9 +38,9 @@ The "AvroToJsonTransformer", originally developed for the Data Warehouse, is [a 
 
 ## Redshift Database
 
-The Redshift db receives all `circ_trans` data and is the database queried by NYPL Development.
+The Redshift db receives all `circ_trans` data and is the database queried by NYPL staff.
 
-### Schema
+### CircTrans Schema
 
 | column                     | type           | description                                                                                                                                                                                                                                                                                                                                                                                                                | sample value                           |
 |----------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
@@ -75,14 +53,14 @@ The Redshift db receives all `circ_trans` data and is the database queried by NY
 | `itype_code_num`           | `SMALLINT`     | [Item Type](https://docs.google.com/spreadsheets/d/1YUZuG8yGS-7kW2uG2eU5K4YWThH-DN8_ucqJaDCAvw4/edit#gid=580006046&range=A1)                                                                                                                                                                                                                                                                                               | `101` (Book, circ)                     |
 | `item_location_code`       | `VARCHAR(20)`  | A five-character [location code](https://docs.google.com/spreadsheets/d/1YUZuG8yGS-7kW2uG2eU5K4YWThH-DN8_ucqJaDCAvw4/edit#gid=2039183095&range=A1), right-padded with spaces, from the associated item record.                                                                                                                                                                                                             | `maj0f`                                |
 | `icode1`                   | `INTEGER`      | Item ["icode1"](https://docs.google.com/spreadsheets/d/1YUZuG8yGS-7kW2uG2eU5K4YWThH-DN8_ucqJaDCAvw4/edit#gid=333228251&range=A1)                                                                                                                                                                                                                                                                                           | `-` (Is this the only possible value?) |
-| `op_code`                  | `VARCHAR(5)`   | Type of transaction: o = checkout i = checkin n = hold nb = bib hold ni = item hold nv = volume hold h = hold with recall hb = hold recall bib hi = hold recall item hv = hold recall volume f = filled hold r = renewal b = booking u = use count                                                                                                                                                                         | `o`                                    |
+| `op_code`                  | `VARCHAR(5)`   | Type of transaction: `o` (checkout), `i` (checkin), `n` (hold), `nb` (bib hold), `ni` (item hold), `nv` (volume hold), `h` (hold with recall), `hb` (hold recall bib), `hi` (hold recall item), `hv` (hold recall volume), `f` (filled hold), `r` (renewal), `b` (booking), `u` (use count)                                                                                                                                                                         | `o`                                    |
 | `transaction_gmt`          | `DATE`         | Transaction date (without time)                                                                                                                                                                                                                                                                                                                                                                                            | `2019-11-15`                           |
 | `due_date_gmt`             | `DATE`         | Due date                                                                                                                                                                                                                                                                                                                                                                                                                   | `2019-11-29`                           |
-| `application_name`         | `VARCHAR(200)` | The name of the program that generated the transaction. Valid program names are: circ (includes transactions made using PC Circ) circa (for transactions written by selfcheckwebserver and in-house use [transaction codes 'u' and 's'], which use webpac to execute transactions.) milcirc milmyselfcheck readreq selfcheck                                                                                               | `readreq`                              |
+| `application_name`         | `VARCHAR(200)` | The name of the program that generated the transaction. Valid program names are: `circ` (includes transactions made using PC Circ), `circa` (for transactions written by selfcheckwebserver and in-house use [transaction codes 'u' and 's'], which use webpac to execute transactions.) `milcirc`, ` milmyselfcheck`, `readreq`, `selfcheck`                                                                                               | `readreq`                              |
 | `stat_group_code_num`      | `SMALLINT`     | The [number of the terminal](https://docs.google.com/spreadsheets/d/1YUZuG8yGS-7kW2uG2eU5K4YWThH-DN8_ucqJaDCAvw4/edit#gid=1498427022&range=A1) at which the transaction occurred or the user-specified statistics group number for PC-Circ transactions. Also stores the login's statistics group number for circulation transactions performed with the following Circa applications: checkout checkin count internal use | `800`                                  |
-| `loanrule_code_num`        | `SMALLINT`     | ?                                                                                                                                                                                                                                                                                                                                                                                                                          | `0`                                    |
+| `loanrule_code_num`        | `SMALLINT`     | Indicates loan rule governing transaction                                                                                                                                                                                                                                                                                                                                                                                                                          | `0`                                    |
 | `source_code`              | `VARCHAR(200)` | The transaction source. Possible values are: local INN-Reach ILL                                                                                                                                                                                                                                                                                                                                                           | `0`                                    |
-| `checkout_count`           | ?              | Patron checkout count                                                                                                                                                                                                                                                                                                                                                                                                      |                                        |
+| `has_checkouts`            | `BOOLEAN`      | Does this patron have a checkout-count > 0?     | `true`                                        |
 | `last_activity`            | `DATE`         | Date (without time) of last activity by patron                                                                                                                                                                                                                                                                                                                                                                             | `2011-11-15`                           |
 
 ### User Management
@@ -118,7 +96,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO GROUP readon
 
 ### Tables
 
-Note that only `circ_trans` is populated dynamically. `patrons` has been deprecated entirely`. The remaining lookup tables may be useful for interpretting codes in `circ_trans`, but are not kept up to date.
+Note that only `circ_trans` is populated dynamically. `patrons` has been deprecated entirely. The remaining lookup tables may be useful for interpretting codes in `circ_trans`, but are not kept up to date.
 
 Name                  | Data Schema                                                                                             | Table Schema                                        | Query                                    | Load                                            | Notes
 --------------------- | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------- | ---------------------------------------- | ----------------------------------------------- | ------------------------------------
@@ -135,7 +113,7 @@ Name                  | Data Schema                                             
 
 ## History (Data Warehouse)
 
-BIC had its origins in the "Data Warehouse". This was a project to extract anonymized circulation data out of NYPL ILS for interpretation by NYPL Development. It was kicked off Oct 12, 2017. It was disabled mid-April, 2018:
+BIC had its origins in the "Data Warehouse". This was a project to extract anonymized circulation data out of NYPL ILS for interpretation by NYPL Strategy. It was kicked off Oct 12, 2017. It was disabled mid-April, 2018:
 
 ```sql
 SELECT MAX(transaction_gmt) FROM circ_trans;
