@@ -49,7 +49,7 @@
     },
     {
        "doc" : "Date of last activity by patron (ISO 8601 date without time in ET)",
-       "name" : "last_activity",
+       "name" : "last_activity_et",
        "type" : [
           "null",
           "string"
