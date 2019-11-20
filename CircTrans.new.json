@@ -89,7 +89,7 @@
     },
     {
        "doc" : "Transaction date (ISO 8601 date without time in ET)",
-       "name" : "transaction_gmt",
+       "name" : "transaction_et",
        "type" : [
           "null",
           "string"
@@ -97,7 +97,7 @@
     },
     {
        "doc" : "Due date (ISO 8601 date without time in ET) The application of this date depends on the `op_code` for the transaction. The due date is not included for bookings (`op_code` `b`) or filled holds (`op_code` `f`). For `op_code` `i` (checkin), this is the original due date. For `op_code` `r` (renewal), this is the renewal due date. For `op_code` `o` (checkouts), this is the item due date. For `op_code` `n` (holds) and `h` (holds with recall), a non-zero entry indicates that the hold is for a checked-out item that is due on the specified date.",
-       "name" : "due_date_gmt",
+       "name" : "due_date_et",
        "type" : [
           "null",
           "string"
