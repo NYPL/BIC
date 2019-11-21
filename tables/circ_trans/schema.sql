@@ -7,15 +7,15 @@ CREATE TABLE circ_trans (
   pcode3 SMALLINT,
   postal_code VARCHAR(5),
   has_checkouts BOOLEAN,
-  last_activity DATE,
+  last_activity_et DATE,
 
   itype_code_num SMALLINT,
   item_location_code VARCHAR(20),
   icode1 INTEGER,
 
   op_code VARCHAR(5),
-  transaction_gmt DATE NOT NULL SORTKEY,
-  due_date_gmt DATE,
+  transaction_et DATE NOT NULL SORTKEY,
+  due_date_et DATE,
   application_name VARCHAR(200),
   stat_group_code_num SMALLINT,
   loanrule_code_num SMALLINT,
