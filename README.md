@@ -20,6 +20,8 @@ The poller is a Ruby native lambda, which polls the Sierra database directly for
 
 ### Firehose
 
+- Kinesis Firehose ([setup](setup/firehose.md))
+
 The ["CircTransAnon" firehose stream](https://console.aws.amazon.com/firehose/home?region=us-east-1#/details/CircTransAnon-production):
 
  * sources events from the "CircTransAnon" Kinesis stream](https://console.aws.amazon.com/kinesis/home?region=us-east-1#/streams/details?streamName=CircTransAnon-production&tab=details)
