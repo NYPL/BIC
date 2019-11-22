@@ -6,8 +6,6 @@ CREATE TABLE circ_trans (
   patron_home_library_code VARCHAR(20),
   pcode3 SMALLINT,
   postal_code VARCHAR(5),
-  has_checkouts BOOLEAN,
-  last_activity_et DATE,
 
   itype_code_num SMALLINT,
   item_location_code VARCHAR(20),
