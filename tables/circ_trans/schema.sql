@@ -1,16 +1,15 @@
 CREATE TABLE circ_trans (
   id INTEGER NOT NULL DISTKEY,
 
-  patron_id INTEGER,
-  ptype_code VARCHAR(5),
-  patron_home_library_code VARCHAR(20),
+  patron_id VARCHAR(31),
+  ptype_code SMALLINT,
+  patron_home_library_code VARCHAR(5),
   pcode3 SMALLINT,
   postal_code VARCHAR(5),
-  has_checkouts BOOLEAN,
-  last_activity_et DATE,
+  geoid VARCHAR(11),
 
   itype_code_num SMALLINT,
-  item_location_code VARCHAR(20),
+  item_location_code VARCHAR(5),
   icode1 INTEGER,
 
   op_code VARCHAR(5),

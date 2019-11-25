@@ -3,6 +3,7 @@ SELECT patron.id AS patron_id,
   circ_trans.patron_home_library_code,
   circ_trans.pcode3,
   patron_address.postal_code,
+  NULL as geoid,
   circ_trans.itype_code_num,
   circ_trans.item_location_code,
   circ_trans.icode1,
@@ -12,9 +13,7 @@ SELECT patron.id AS patron_id,
   circ_trans.application_name,
   circ_trans.stat_group_code_num,
   circ_trans.loanrule_code_num,
-  circ_trans.source_code,
-  CASE WHEN patron.checkout_count > 0 THEN TRUE ELSE FALSE AS has_checkouts,
-  to_date(cast(patron.activity_gmt AS TEXT), 'YYYY-MM-DD') AS last_activity
+  circ_trans.source_code
   FROM sierra_view.circ_trans
   LEFT JOIN sierra_view.patron_record patron ON circ_trans.patron_record_id = patron.record_id
   LEFT JOIN sierra_view.patron_record_address patron_address ON circ_trans.patron_record_id = patron_address.patron_record_id
