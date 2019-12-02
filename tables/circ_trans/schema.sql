@@ -1,6 +1,4 @@
 CREATE TABLE circ_trans (
-  id INTEGER NOT NULL DISTKEY,
-
   patron_id VARCHAR(31),
   ptype_code SMALLINT,
   patron_home_library_code VARCHAR(5),
