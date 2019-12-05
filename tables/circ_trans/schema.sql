@@ -1,9 +1,11 @@
 CREATE TABLE circ_trans (
-  patron_id VARCHAR(31),
+  id INTEGER NOT NULL DISTKEY,
+  transaction_id VARCHAR(100)
+  patron_id VARCHAR(100),
   ptype_code SMALLINT,
   patron_home_library_code VARCHAR(5),
   pcode3 SMALLINT,
-  postal_code VARCHAR(5),
+  postal_code VARCHAR(11),
   geoid VARCHAR(11),
 
   itype_code_num SMALLINT,
