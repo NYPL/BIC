@@ -5,7 +5,7 @@ CREATE TABLE circ_trans (
   ptype_code SMALLINT,
   patron_home_library_code VARCHAR(5),
   pcode3 SMALLINT,
-  postal_code VARCHAR(11),
+  postal_code VARCHAR(5),
   geoid VARCHAR(11),
 
   itype_code_num SMALLINT,
