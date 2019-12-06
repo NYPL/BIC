@@ -1,6 +1,6 @@
 CREATE TABLE circ_trans (
-  id INTEGER NOT NULL DISTKEY,
-  transaction_id VARCHAR(100)
+  uuid VARCHAR(36) NOT NULL,
+  transaction_checksum VARCHAR(100)
   patron_id VARCHAR(100),
   ptype_code SMALLINT,
   patron_home_library_code VARCHAR(5),
