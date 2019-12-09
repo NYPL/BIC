@@ -17,6 +17,38 @@ def hash_sensitive_value (inp)
 end
 ```
 
+Note that we're intentionally only using the hash part of the bcrypt output. Normally, bcrypt is used to generate a value that prepends the hashing algorithm, cost, and salt to the front of the hash. This serves a common use of bcrypt: An incoming plaintext value needs to be compared to a previously hashed value using an identical cost and salt. At no point in our workflow will we need to compare a plaintext value to a previously encrypted value. Also our salt must be kept secret. That being the case, it's necessary to strip the prefix from the hash value. The `ruby` example above does this using the `.checksum` method.
+
+In Java:
+
+```java
+import org.springframework.security.crypto.bcrypt.*;
+...
+public void hashSensitiveValue(String inp) {
+  String salt = System.getenv("BCRYPT_SALT");
+  String obfuscatedValue = BCrypt.hashpw(patron_id, salt);
+  // Strip the algorithm, cost, & salt prefix:
+  obfuscatedValue = obfuscatedValue.substring(29);
+  return obfuscatedValue;
+}
+```
+
+In general, substringing the output of `bcrypt` starting at index 29 will give us the obfuscated id we want.
+
+For example, if a full bcrypt hash value is:
+
+```
+$2a$07$dwk1yoKFIIhejOZJLmMH4uwo7cDpXB1JMmlMgpVvn.VrMqjt7iBJC
+```
+
+The component parts are:
+
+| Hashing alg. | Cost | Salt                     | Hash (index 29)                   |
+|--------------|------|--------------------------|-----------------------------------|
+| `2a`         | `07` | `dwk1yoKFIIhejOZJLmMH4u` | `wo7cDpXB1JMmlMgpVvn.VrMqjt7iBJC` |
+
+### Generating a salt
+
 To generate a suitable value for `ENV['BCRYPT_SALT']`:
 
 ```ruby
