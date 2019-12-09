@@ -1,5 +1,7 @@
 CREATE TABLE circ_trans (
-  patron_id VARCHAR(31),
+  uuid VARCHAR(36) NOT NULL,
+  transaction_checksum VARCHAR(100)
+  patron_id VARCHAR(100),
   ptype_code SMALLINT,
   patron_home_library_code VARCHAR(5),
   pcode3 SMALLINT,
