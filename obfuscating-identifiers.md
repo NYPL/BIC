@@ -24,14 +24,16 @@ In Java:
 ```java
 import org.springframework.security.crypto.bcrypt.*;
 ...
-public void hashSensitiveValue(String inp) {
+public String hashSensitiveValue(String inp) {
   String salt = System.getenv("BCRYPT_SALT");
-  String obfuscatedValue = BCrypt.hashpw(patron_id, salt);
+  String obfuscatedValue = BCrypt.hashpw(inp, salt);
   // Strip the algorithm, cost, & salt prefix:
   obfuscatedValue = obfuscatedValue.substring(29);
   return obfuscatedValue;
 }
 ```
+
+See [obfuscate-examples](./obfuscate-examples/README.md) for full, runnable sample scripts.
 
 In general, substringing the output of `bcrypt` starting at index 29 will give us the obfuscated id we want.
 
