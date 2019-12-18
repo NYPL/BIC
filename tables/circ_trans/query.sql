@@ -1,14 +1,21 @@
-select
-    item.record_num as item_id,
-    patron.record_num as patron_id,
-    bib.record_num as bib_id,
-    volume.record_num as volume_id,
-    circ_trans.*
-    from sierra_view.circ_trans as circ_trans
-    left join sierra_view.record_metadata as item on item.id = circ_trans.item_record_id
-    left join sierra_view.record_metadata as patron on patron.id = circ_trans.patron_record_id
-    left join sierra_view.record_metadata as bib on bib.id = circ_trans.bib_record_id
-    left join sierra_view.record_metadata as volume on volume.id = circ_trans.volume_record_id
-    where circ_trans.id >= :start_id
-    order by circ_trans.id
-    limit 1;
+SELECT patron.id AS patron_id,
+  circ_trans.ptype_code,
+  circ_trans.patron_home_library_code,
+  circ_trans.pcode3,
+  patron_address.postal_code,
+  NULL as geoid,
+  circ_trans.itype_code_num,
+  circ_trans.item_location_code,
+  circ_trans.icode1,
+  circ_trans.op_code,
+  to_date(cast(circ_trans.transaction_gmt AS TEXT), 'YYYY-MM-DD'),
+  to_date(cast(circ_trans.due_date_gmt AS TEXT), 'YYYY-MM-DD'),
+  circ_trans.application_name,
+  circ_trans.stat_group_code_num,
+  circ_trans.loanrule_code_num,
+  circ_trans.source_code
+  FROM sierra_view.circ_trans
+  LEFT JOIN sierra_view.patron_record patron ON circ_trans.patron_record_id = patron.record_id
+  LEFT JOIN sierra_view.patron_record_address patron_address ON circ_trans.patron_record_id = patron_address.patron_record_id
+  WHERE circ_trans.id >= :start_id
+  LIMIT 1;
