@@ -15,6 +15,8 @@ We include two obfucated values from the original transaction:
  * To ensure distinct patron activity can be queried, `patron_id` is hashed using a closely guarded cryptographic [salt](https://en.wikipedia.org/wiki/Salt_(cryptography)).
  * We also include a `transaction_checksum` column in exported data to serve as a "checksum" on the data. The transaction id uniquely identifies each transaction; If a pipeline issue duplicates records, they can be de-duped using this column. Our transaction id is built by concatenating the original transaction id, patron id, and transaction date (as an int) and then bcrypting the result with a dedicated secret salt. Because one would need to have the original, non-obfuscated patron id and the full timestamp (not to mention the salt) to decrypt the resulting value back to the original transaction id - and because doing so would be worthless without simultaneous access to Sierra - we consider this a safe practice.
 
+See [Obfuscating Identifiers in BIC](obfuscating-identifiers.md) for a fuller explanation our obfuscation method.
+
 ### Generalization
 
 The data granularity has been reduced to ensure that - should one have the means to identify an individual - the transaction history obtained would be of very low quality. In particular transactions do not record item information except `item_code_num`, `item_location_code`, and `icode1`. To make re-identification difficult, all timestamps are stored with day granularity, ensuring for example, that the *time* of checkout can not be used together with item type to re-identify an anonymized transaction.
