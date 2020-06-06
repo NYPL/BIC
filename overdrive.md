@@ -88,19 +88,23 @@ Estimated time: 1 developer <1 sprint
 
 ## Census Tracts
 
-We can compute census tract for a given NYC address using [NYC Planning's Geosupport package](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-gde-home.page). [Python bindings exist](https://github.com/ishiland/python-geosupport). [NYC Planning published a guide to using it](https://medium.com/nyc-planning-digital/geosupport-%EF%B8%8Fpython-a094a2d30fbe).
+We can compute census tract for a given NYC address using [NYC Planning's Geosupport package](https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-gde-home.page). [Python bindings exist](https://github.com/ishiland/python-geosupport) (See also this [article](https://medium.com/nyc-planning-digital/geosupport-%EF%B8%8Fpython-a094a2d30fbe).) as well as for [Ruby](https://github.com/jordanderson/nyc_geosupport).
 
-One way to use this efficiently would be to create a "nyc-geocoding" package or Lambda layer, which included the geosupport binaries, the python bindings, and a simple python invocation script with an interface like the following to print census tract ids:
+One way to use this efficiently would be to create a "nyc-geocoding" package or Lambda layer, which included the geosupport binaries, the python/Ruby bindings, and a simple python invocation script with an interface like the following to print census tract ids:
 
 ```
-/opt/nyc-geocoding/census-tract.py --address1 [address1] --address2 [address2] --city [city] --state [state] --zip [zip]
+/opt/nyc-geocoding/census-tract.rb --address1 [address1] --address2 [address2] --city [city] --state [state] --zip [zip]
 ```
 
-A lambda written in any language, attached to the 'nyc-geocoding' layer could call on that python script to extract census tract id for arbitrary NYC addresses using a system call. (Note that addresses in Sierra are stored as "line1" and "line2", so would need to parse city, state, and zip out of line2 before calling.)
+(Note that addresses in Sierra are stored as "line1" and "line2", so would need to parse city, state, and zip out of line2 before calling.)
 
-This needn't necessarily use Layers. Nyc-geocoding could be a repo with ruby/Node bindings built on top of the python script, pulled into apps that need it via git submodule, rubygems, or npmjs.
+If deployed as a lambda Layer, the package could be attached to a lambda written in any language. Ruby lambdas could require `census-tract.rb` directly. Other languages could interact with the CLI via system calls. Note that Beanstalks can not use Layers.
 
-Provided we can keep the geocoding entirely offline (which is the rationale for using this particular package), we may avoid caching.
+Alternatively, `nyc-geocoding` could just be a git repo, pulled into Lambda/Beanstalk apps as a git submodule.
+
+Alternatively still, one could turn `nyc-geocoding` into a local service, which any app could interact with over HTTP. A third party service likely already exists, but we'd have to be skeptical of rate limiting, cost, and efficiency. To reduce calls, we could cache recently-geocoded addresses, but we should be very cautious about TTL because census tracts do change.
+
+Note that - if using offline geosupport - the work will have to include building a means to *update* the underlying assets as NYC Planning releases updates.
 
 Estimated time: 1 developer 1-2 sprints
 
@@ -117,7 +121,7 @@ The existing [dataHarvester](https://github.com/NYPL/dataHarvester) is a Java ap
 
  * Include nyc-geocoding module as a git submodule
  * Ensure necessary geo data is fetched and environment initialized via EB build scripts
- * Add a system call to the Java app to call `census-tract.py` to compute geoid (which already exists in `CircTrans` schema)
+ * Add a system call to the Java app to call `census-tract.rb` to compute geoid (which already exists in `CircTrans` schema)
 
 Estimated time: 1 developer 1-2 sprints
 
@@ -177,7 +181,7 @@ This is the current process:
  - rm -rf RANK_work.over_raw
 7. Build patron lookup from Sierra:
  - Run a big sql against Sierra to build a lookup consisting of:
-    sierra_view.patron_view.record_num,             # patron id ?
+    sierra_view.patron_view.record_num,             # patron id (e.g. .p1234567)
     sierra_view.patron_view.id,                     # patron id? (Later referred to as 'hash'?)
     sierra_view.patron_view.ptype_code,             # ptype
     sierra_view.patron_view.home_library_code,      # location
