@@ -42,6 +42,10 @@ The essential steps for harvesting the reports are:
    * Download report data via URL
    * Store retrieval time somewhere (Redis?) so that subsequent invocation can use next logical range
 
+See [Current Process](#current-process) for the current manual steps we're trying to emulate.
+
+Note that it may be the case that downloadable CSV URLs can be created from Marketplace URLs by replacing "View/CheckoutsDetail" with "Export/CheckoutsDetail/CSV".
+
 Things to consider:
  * We should strive to script this in a way that is flexible to design changes and simple to update (e.g. follow links based on link text rather than CSS selector class name)
  * We should log and monitor all issues encountered by scraper so that failures are identified quickly so they can be repaired
@@ -158,7 +162,14 @@ These are the planned fields for `overdrive_circ_trans`:
 This is the current process:
 
 1. Fetch reports:
- - On Overdrive marketplace, do checkouts by format in desired date range, sort by name
+ - Log in to Overdrive > Insights > Checkouts
+ - Click "Run new report"
+ - Select "Checkouts by" .. "Format"
+ - The resulting page lists 13 results corresponding to each of the 13 formats
+ - For each of them:
+   - Click on the title (e.g. "Adobe EPUB EBook")
+   - That produces a paginated listing of all distinct checkouts for that format (Adobe EPUB EBook has 4356 results over 88 pages at writing)
+   - Click "Create worksheet" to download the CSV containing all rows
  - As of 04/10/2020 we expect 13 files (may increase over time).
  - Download Overdrive Checkout stats for the desired time period by format
  - This presumably produces several files called Checkout{N}.csv for N = 1 through 13 - presumably always in the same order
