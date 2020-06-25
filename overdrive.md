@@ -154,6 +154,7 @@ These are the planned fields for `overdrive_circ_trans`:
   - If `overdrive_format` = 'Video' then `126`
   - If `overdrive_format` = 'Music' then `127`
 * `overdrive_borrowed_from`: Source of checkout. E.g. 'API', 'Main Collection', 'Libby', etc.
+* `overdrive_audience`: E.g. 'Adult Fiction', 'Adult Nonfiction', 'Young Adult Fiction'
 * `overdrive_format2`: E.g. 'Adobe Epub Book', 'Kindle Book', etc. May not exist in Overdrive data explicitly but be implicit in where the transaction was scraped from.
 
 
