@@ -56,7 +56,7 @@ Estimated time: 1 developer 1-2 sprints
 
 ### 2. Massage 
 
-After each harvest, we'll have one CSV report for each queried format (13 at writing). We'll need to perform the following tranformations:
+After each harvest, we'll have one CSV report for each queried format (14 at writing). We'll need to perform the following tranformations:
  * Add "format2" column identifying format
  * Removes line(s) matching /^CrossRefID/
  * Assemble one master CSV
@@ -166,14 +166,14 @@ This is the current process:
  - Log in to Overdrive > Insights > Checkouts
  - Click "Run new report"
  - Select "Checkouts by" .. "Format"
- - The resulting page lists 13 results corresponding to each of the 13 formats
+ - The resulting page lists 14 results corresponding to each of the 14 formats
  - For each of them:
    - Click on the title (e.g. "Adobe EPUB EBook")
    - That produces a paginated listing of all distinct checkouts for that format (Adobe EPUB EBook has 4356 results over 88 pages at writing)
    - Click "Create worksheet" to download the CSV containing all rows
- - As of 04/10/2020 we expect 13 files (may increase over time).
+ - As of 07/01/2020 we expect 14 files (may increase over time)
  - Download Overdrive Checkout stats for the desired time period by format
- - This presumably produces several files called Checkout{N}.csv for N = 1 through 13 - presumably always in the same order
+ - This presumably produces several files called Checkout{N}.csv for N = 1 through 14 - presumably always in the same order
  - Copy Checkout*.csv to script directory
 2. Prepper.bash
  - Run prepper.bash to add appropriate format2 column to end of all rows and concat result into RANK_work.prep
