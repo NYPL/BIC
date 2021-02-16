@@ -173,7 +173,7 @@ This is the current process:
    - Click "Create worksheet" to download the CSV containing all rows
  - As of 07/01/2020 we expect 14 files (may increase over time)
  - Download Overdrive Checkout stats for the desired time period by format
- - This presumably produces several files called Checkout{N}.csv for N = 1 through 14 - presumably always in the same order
+ - This presumably produces several files called Checkout{N}.csv for N = 1 through 14 - presumably always in the same order (Update 2021-02-16: Aaron D reports these files may now be called "CheckoutsDetail*", may have DOS encoding rather than unix, and may be hosted on something Facebook affiliated..)
  - Copy Checkout*.csv to script directory
 2. Prepper.bash
  - Run prepper.bash to add appropriate format2 column to end of all rows and concat result into RANK_work.prep
